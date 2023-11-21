@@ -1,5 +1,16 @@
-.App {
-  text-align: center;
+/* font-family: 'Abril Fatface', cursive;
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Rubik', sans-serif;
+*/
+
+html, body{
+  font-size: 18px;
+}
+
+h1, h2, h3 {
+  font-family: "Oswald", sans-serif;
 }
 
 .App-logo {
@@ -35,4 +46,43 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .blend-text {
+  color: #fffd;
+} */
+
+.blockquote-footer {
+  color: #fff9!important;
+}
+
+.bg-cover{
+  background-size: cover!important;
+}
+
+.fade-light{
+  opacity: 80%;
+}
+
+.good-width {
+  width: 100%;
+  max-width: 70ch;
+}
+
+#scripture-list{
+  font-size: 22px;
+}
+
+#scripture-list li{
+  margin-top: 10px;
 }
