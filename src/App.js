@@ -81,7 +81,7 @@ function App() {
           offset={0}
           speed={0.5}
           factor={1}
-          className="flex-center text-center flex-column blend-text "
+        // className="flex-center text-center flex-column blend-text "
         >
           <Hello />
         </ParallaxLayer>
@@ -113,6 +113,7 @@ function App() {
           factor={1}
           speed={0.1}
           className="px-4 flex-center flex-column"
+          id='about'
         >
           <About />
         </ParallaxLayer>

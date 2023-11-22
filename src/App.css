@@ -5,25 +5,25 @@ font-family: 'Oswald', sans-serif;
 font-family: 'Rubik', sans-serif;
 */
 
-html, body{
+/* html, body{
   font-size: 18px;
-}
+} */
 
-h1, h2, h3 {
+/* h1, h2, h3 {
   font-family: "Oswald", sans-serif;
-}
+} */
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
+} */
+/* 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -33,56 +33,56 @@ h1, h2, h3 {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
-.bg-transparent {
+/* .bg-transparent {
   background-color: transparent;
-}
+} */
 
-.flex-center {
+/* .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* .blend-text {
+} */
+/* 
+.blend-text {
   color: #fffd;
 } */
 
-.blockquote-footer {
+/* .blockquote-footer {
   color: #fff9!important;
-}
+} */
 
-.bg-cover{
+/* .bg-cover{
   background-size: cover!important;
-}
+} */
 
-.fade-light{
+/* .fade-light{
   opacity: 80%;
-}
+} */
 
-.good-width {
+/* .good-width {
   width: 100%;
   max-width: 70ch;
-}
+} */
 
-#scripture-list{
+/* #scripture-list{
   font-size: 22px;
-}
+} */
 
-#scripture-list li{
+/* #scripture-list li{
   margin-top: 10px;
-}
+} */

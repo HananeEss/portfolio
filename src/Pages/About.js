@@ -10,7 +10,7 @@ export const About = () => {
     return (
 
         <div>
-            <div style={{ height: '15%' }}>
+            <div className="mt-5 pt-5" style={{ height: '15%' }}>
                 <h1 className="text-center lh-base font-monospace fw-semibold">A propos de moi</h1>
             </div>
 
