@@ -33,7 +33,7 @@ export const Contact = () => {
 
     return (
 
-        <div className='w-75 '>
+        <div >
 
             <div>
                 <h1 className="text-center lh-base font-monospace fw-semibold">Contact</h1>

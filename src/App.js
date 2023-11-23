@@ -9,22 +9,24 @@ import { useRef } from 'react';
 
 // import projets from './datas/projects'
 
-import bg2 from './assets/comfy_studio.png'
-import bg3 from './assets/kasa_capture.png'
+
+
 import bg4 from './assets/ColorPigments/Kingblack95_ColorPigments_Collision_Background_KB95_010.png'
-import bg5 from './assets/studio_ghibli.png'
+
 // import { Welcome } from './Pages/Welcome';
 import { About } from './Pages/About'
 import { Hello } from './Pages/Hello';
 // import { Skills } from './Pages/Skills';
 import { Header } from './Components/Header';
 
-import Card from 'react-bootstrap/Card';
 import { Contact } from './Pages/Contact';
 import { Footer } from './Components/Footer';
 import { ProjetsTitle } from './Pages/ProjetsTitle';
 // import { ProjectCard } from './Components/Projects';
 import useAdaptiveTriggers from './parallx-config'
+import { P1card } from './Components/P1card';
+import { P2card } from './Components/P2card';
+import { P3card } from './Components/P3card';
 // import { ParallaxConfig } from './parallx-config'
 // import Adaptive from './parallx-config'
 
@@ -48,7 +50,7 @@ const Pages = {
 
 const ParallaxConfig = {
   [Adaptive.xs]: {
-    pages: 10,
+    pages: 6.5,
     [Pages.firstPage]: {
       offset: 0,
       factor: 1,
@@ -65,14 +67,38 @@ const ParallaxConfig = {
     },
     [Pages.fourthPage]: {
       offset: 1,
-      speed: 0.2,
+      speed: 0.3,
       factor: 1
     },
     [Pages.fifthPage]: {
-      offset: 2.5,
-      speed: 0.1,
+      offset: 2.3,
+      speed: 0.2,
       factor: 0.5,
     },
+    [Pages.sixthPage]: {
+      offset: 2.7,
+      speed: 0.1,
+      factor: 1,
+    },
+    [Pages.seventhPage]: {
+      offset: 3.7,
+      speed: 0.2,
+      factor: 1,
+    },
+    [Pages.eighthPage]: {
+      offset: 4.7,
+      speed: 0.25,
+      factor: 1,
+    },
+    [Pages.ninthPage]: {
+      offset: 5.6,
+      speed: 0.1,
+      factor: 1,
+    },
+    [Pages.tenthPage]: {
+      offset: 6.5,
+      factor: 0.1,
+    }
   },
 
   [Adaptive.xl]: {
@@ -102,17 +128,16 @@ const ParallaxConfig = {
       factor: 0.5,
     },
     [Pages.sixthPage]: {
-      start: 2.5,
-      end: 4
+      sticky: { start: 2.5, end: 4 },
     },
     [Pages.seventhPage]: {
-      sticky: 'start: 3, end: 4.5',
+      sticky: { start: 3, end: 4.5 },
     },
     [Pages.eighthPage]: {
-      sticky: 'start: 3.5, end: 5',
+      sticky: { start: 3.5, end: 5 },
     },
     [Pages.ninthPage]: {
-      offset: 6,
+      offset: 6.1,
       speed: 0.1,
       factor: 1,
     },
@@ -149,7 +174,7 @@ function App() {
           offset = 2;
           break;
         case 'contact':
-          offset = 6;
+          offset = 5.5;
           break;
         default:
           // Gérer le cas par défaut ou d'autres identifiants si nécessaire
@@ -235,110 +260,42 @@ function App() {
         {/* Projects CARDS */}
 
         <ParallaxLayer
-          //dans start je rajoute +0.5
-          // sticky={ParallaxConfig[width][Pages.sixthPage].sticky}
-          sticky={{ start: 2.5, end: 4 }}
-          style={{ width: "33%" }}
+          sticky={ParallaxConfig[width][Pages.sixthPage].sticky}
+          offset={ParallaxConfig[width][Pages.sixthPage].offset}
+          factor={ParallaxConfig[width][Pages.sixthPage].factor}
+          speed={ParallaxConfig[width][Pages.sixthPage].speed}
         >
 
-          <Card style={{
-            borderRadius: 0,
-            width: "100%",
-            height: "75%",
-            background: `rgba(0,0,0,0.3) url(${bg2})`,
-            // backgroundPosition: "center",
-            // backgroundBlendMode: "darken",
-            backgroundSize: "cover",
-            color: "white",
-            // display: "flex",
-            // alignItems: "center",
-            justifyContent: "center",
-            // objectFit: 'contain'
-          }}
-          >
-          </Card>
-
-          <div className='p-4 border-end border-bottom border-secondary-subtle text-center  bg-secondary bg-opacity-10'>
-            <h1 className="p-3 fw-semibold font-monospace" style={{ fontSize: '30px' }} >Comfy Studio</h1>
-            <p style={{ fontSize: '15px' }} >
-              Site de vente de meubles
-              <br />
-              (React, ExpressJS, Axios, MySQL/Sequelize, Tailwind)
-            </p>
-          </div>
+          <P1card />
 
         </ParallaxLayer>
 
         <ParallaxLayer
-          sticky={{ start: 3, end: 4.5 }}
-          // className="flex-center"
-          style={{ width: "34%", marginLeft: "33%" }}
+          sticky={ParallaxConfig[width][Pages.seventhPage].sticky}
+          offset={ParallaxConfig[width][Pages.seventhPage].offset}
+          factor={ParallaxConfig[width][Pages.seventhPage].factor}
+          speed={ParallaxConfig[width][Pages.seventhPage].speed}
         >
-          <Card style={{
-            borderRadius: 0,
-            width: "100%",
-            height: "75%",
-            background: `rgba(0,0,0,0.3) url(${bg3})`,
-            // backgroundPosition: "center",
-            // backgroundBlendMode: "darken",
-            backgroundSize: "cover ",
-            color: "white",
-            // display: "flex",
-            // alignItems: "center",
-            justifyContent: "center",
-          }}
-          >
-          </Card>
-
-          <div className='p-4 border-end border-bottom border-start border-secondary-subtle text-center  bg-secondary bg-opacity-10'>
-            <h1 className="p-3 fw-semibold font-monospace" style={{ fontSize: '30px' }} >Kasa</h1>
-            <p style={{ fontSize: '15px' }} >
-              Site d'annonces de logements
-              <br />
-              (React, CSS, Styled Components)
-            </p>
-          </div>
+          <P2card />
 
         </ParallaxLayer>
 
         <ParallaxLayer
-          sticky={{ start: 3.5, end: 5 }}
-          // className="flex-center"
-          style={{ width: "33%", marginLeft: "67%" }}
+          sticky={ParallaxConfig[width][Pages.eighthPage].sticky}
+          offset={ParallaxConfig[width][Pages.eighthPage].offset}
+          factor={ParallaxConfig[width][Pages.eighthPage].factor}
+          speed={ParallaxConfig[width][Pages.eighthPage].speed}
         >
-          <Card style={{
-            borderRadius: 0,
-            // width: "100%",
-            height: "75%",
-            background: `rgba(0,0,0,0.3) url(${bg5})`,
-            // backgroundPosition: "center",
-            // backgroundBlendMode: "darken",
-            backgroundSize: "cover",
-            color: "white",
-            // display: "flex",
-            // alignItems: "center",
-            justifyContent: "center"
-          }}
-          >
-          </Card>
-
-          <div className='p-4 border-bottom border-start border-secondary-subtle text-center  bg-secondary bg-opacity-10'>
-            <h1 className="p-3 fw-semibold font-monospace" style={{ fontSize: '30px' }} >Studio Ghibli</h1>
-            <p style={{ fontSize: '15px' }} >
-              Site pour afficher les films du studio Ghibli
-              <br />
-              (HTML, JavaScript, CSS)
-            </p>
-          </div>
+          <P3card />
 
         </ParallaxLayer>
 
 
         <ParallaxLayer
-          offset={6}
-          factor={1}
-          speed={0.1}
-          className="p-5 flex-center flex-column"
+          offset={ParallaxConfig[width][Pages.ninthPage].offset}
+          factor={ParallaxConfig[width][Pages.ninthPage].factor}
+          speed={ParallaxConfig[width][Pages.ninthPage].speed}
+          className="flex-center flex-column mx-auto w-75"
         >
           <Contact />
         </ParallaxLayer>
