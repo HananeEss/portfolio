@@ -96,8 +96,8 @@ const ParallaxConfig = {
       factor: 1,
     },
     [Pages.tenthPage]: {
-      offset: 5,
-      factor: 0,
+      offset: 7.5,
+
     }
   },
 
