@@ -1,4 +1,5 @@
 import React from 'react'
+import { Analytics } from '@vercel/analytics/react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
@@ -464,7 +465,7 @@ function App() {
 
 
       </Parallax>
-
+      <Analytics />
     </div>
   );
 }

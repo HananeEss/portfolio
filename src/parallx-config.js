@@ -29,7 +29,7 @@ const useAdaptiveTriggers = ({
                 onSmallEnter?.();
                 return setWidth(Adaptive.s);
             }
-            if (window?.innerWidth < 768) {
+            if (window?.innerWidth < 769) {
                 onMediumEnter?.();
                 return setWidth(Adaptive.m);
             }
