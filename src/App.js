@@ -112,7 +112,6 @@ function App() {
           offset={1}
           factor={1}
           speed={0.1}
-          className="px-4 flex-center flex-column"
           id='about'
         >
           <About />

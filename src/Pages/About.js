@@ -1,11 +1,43 @@
 
 import { Button } from "react-bootstrap"
 import { Skills } from "../Components/Skills"
+import styled from 'styled-components';
 
 const skills = ['HTML', 'CSS', 'JavaScript', 'Tailwind', 'Bootstrap', 'React', 'NodeJS Basics', 'ExpressJS', 'SQL Basics', 'Sequelize', 'GIT', 'Github']
 const targetedSkills = ['Java', 'Testing', 'Web Security', 'SEO']
 
+const Description = styled.div` 
+
+    @media (max-width: 650px) {
+        width: 100%;
+        display: flex; 
+        flex-direction: column;
+    }
+`
+
+const DescriptionDiv = styled.div` 
+    width: 75%;
+    padding-left: 40px;
+
+    @media (max-width: 650px) {
+        width: 100%;
+        padding-left: 15px;
+    }
+`
+
+const Competences = styled.div`
+    width: 50%;
+    padding-left: 40px;
+    @media (max-width: 650px) {
+        width: 100%;
+        padding-left: 15px;
+    }
+`
+
+
 export const About = () => {
+
+
 
     return (
 
@@ -14,12 +46,16 @@ export const About = () => {
                 <h1 className="text-center lh-base font-monospace fw-semibold">A propos de moi</h1>
             </div>
 
-            <div className="d-flex">
+            <Description className="d-flex" >
 
-                <div className="ps-5 pe-4 w-75">
+                <DescriptionDiv className=" pe-4">
+
                     <p className="py-4" style={{ fontSize: '25px' }}> Qui suis-je ?</p>
 
-                    <p style={{ fontSize: '15px', textAlign: 'justify' }}>
+                    <p style={{
+                        fontSize: '15px',
+                        textAlign: 'justify',
+                    }}>
                         👋 Bonjour ! Je suis une développeuse web full stack passionnée, ayant embrassé cette voie après une reconversion. Mon parcours atypique m'a dotée de compétences variées et de développer une approche créative dans la résolution de problèmes.
                         <br />
                         <br />
@@ -45,9 +81,9 @@ export const About = () => {
 
 
                     </div>
-                </div>
+                </DescriptionDiv>
 
-                <div className="ps-5 w-50">
+                <Competences className=" ">
                     <div>
                         <p className="py-4" style={{ fontSize: '25px' }}>
                             Compétences</p>
@@ -59,9 +95,9 @@ export const About = () => {
                         <Skills skill={targetedSkills} />
                     </div>
 
-                </div>
+                </Competences>
 
-            </div>
+            </Description>
 
         </div >
 
