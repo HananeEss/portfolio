@@ -50,7 +50,7 @@ const Pages = {
 
 const ParallaxConfig = {
   [Adaptive.xs]: {
-    pages: 7,
+    pages: 7.5,
     [Pages.firstPage]: {
       offset: 0,
       factor: 1,
@@ -67,37 +67,37 @@ const ParallaxConfig = {
     },
     [Pages.fourthPage]: {
       offset: 1,
-      speed: 0.3,
+      speed: 0.15,
       factor: 1
     },
     [Pages.fifthPage]: {
-      offset: 2.3,
-      speed: 0.2,
+      offset: 2.6,
+      speed: 0.15,
       factor: 0.5,
     },
     [Pages.sixthPage]: {
-      offset: 2.8,
+      offset: 3.2,
       speed: 0.1,
       factor: 1,
     },
     [Pages.seventhPage]: {
-      offset: 3.7,
+      offset: 4.2,
       speed: 0.1,
       factor: 1,
     },
     [Pages.eighthPage]: {
-      offset: 4.7,
+      offset: 5.2,
       speed: 0.1,
       factor: 1,
     },
     [Pages.ninthPage]: {
-      offset: 5.8,
+      offset: 6.5,
       speed: 0.1,
       factor: 1,
     },
     [Pages.tenthPage]: {
-      offset: 6.5,
-      factor: 0.1,
+      offset: 5,
+      factor: 0,
     }
   },
 
@@ -301,8 +301,8 @@ function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={7}
-          factor={0.1}
+          offset={ParallaxConfig[width][Pages.tenthPage].offset}
+          factor={ParallaxConfig[width][Pages.tenthPage].factor}
         // className="p-5 flex-center flex-column"
         >
           <Footer />
