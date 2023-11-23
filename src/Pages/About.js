@@ -8,7 +8,7 @@ const targetedSkills = ['Java', 'Testing', 'Web Security', 'SEO']
 
 const Description = styled.div` 
 
-    @media (max-width: 650px) {
+    @media (max-width: 768px) {
         width: 100%;
         display: flex; 
         flex-direction: column;
@@ -19,7 +19,7 @@ const DescriptionDiv = styled.div`
     width: 75%;
     padding-left: 40px;
 
-    @media (max-width: 650px) {
+    @media (max-width: 768px) {
         width: 100%;
         padding-left: 15px;
     }
@@ -28,7 +28,7 @@ const DescriptionDiv = styled.div`
 const Competences = styled.div`
     width: 50%;
     padding-left: 40px;
-    @media (max-width: 650px) {
+    @media (max-width: 768px) {
         width: 100%;
         padding-left: 15px;
     }
@@ -83,7 +83,7 @@ export const About = () => {
                     </div>
                 </DescriptionDiv>
 
-                <Competences className=" ">
+                <Competences>
                     <div>
                         <p className="py-4" style={{ fontSize: '25px' }}>
                             Compétences</p>

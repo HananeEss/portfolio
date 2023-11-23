@@ -24,11 +24,117 @@ import { Contact } from './Pages/Contact';
 import { Footer } from './Components/Footer';
 import { ProjetsTitle } from './Pages/ProjetsTitle';
 // import { ProjectCard } from './Components/Projects';
+import useAdaptiveTriggers from './parallx-config'
+// import { ParallaxConfig } from './parallx-config'
+// import Adaptive from './parallx-config'
+
+const Adaptive = {
+  xs: 'xs',
+  xl: 'xl',
+};
+
+const Pages = {
+  firstPage: 'firstPage',
+  secondPage: 'secondPage',
+  thirdPage: 'thirdPage',
+  fourthPage: 'fourthPage',
+  fifthPage: 'fifthPage',
+  sixthPage: 'sixthPage',
+  seventhPage: 'seventhPage',
+  eighthPage: 'eighthPage',
+  ninthPage: 'ninthPage',
+  tenthPage: 'tenthPage'
+};
+
+const ParallaxConfig = {
+  [Adaptive.xs]: {
+    pages: 10,
+    [Pages.firstPage]: {
+      offset: 0,
+      factor: 1,
+    },
+    [Pages.secondPage]: {
+      offset: 0,
+      speed: 0.5,
+      factor: 1
+    },
+    [Pages.thirdPage]: {
+      offset: 0.95,
+      speed: -5,
+      factor: 1
+    },
+    [Pages.fourthPage]: {
+      offset: 1,
+      speed: 0.2,
+      factor: 1
+    },
+    [Pages.fifthPage]: {
+      offset: 2.5,
+      speed: 0.1,
+      factor: 0.5,
+    },
+  },
+
+  [Adaptive.xl]: {
+    pages: 7.15,
+    [Pages.firstPage]: {
+      offset: 0,
+      factor: 1,
+    },
+    [Pages.secondPage]: {
+      offset: 0,
+      speed: 0.5,
+      factor: 1
+    },
+    [Pages.thirdPage]: {
+      offset: 0.95,
+      speed: -5,
+      factor: 1
+    },
+    [Pages.fourthPage]: {
+      offset: 1,
+      speed: 0.2,
+      factor: 1
+    },
+    [Pages.fifthPage]: {
+      offset: 2,
+      speed: 0.1,
+      factor: 0.5,
+    },
+    [Pages.sixthPage]: {
+      start: 2.5,
+      end: 4
+    },
+    [Pages.seventhPage]: {
+      sticky: 'start: 3, end: 4.5',
+    },
+    [Pages.eighthPage]: {
+      sticky: 'start: 3.5, end: 5',
+    },
+    [Pages.ninthPage]: {
+      offset: 6,
+      speed: 0.1,
+      factor: 1,
+    },
+    [Pages.tenthPage]: {
+      offset: 7,
+      factor: 0.1,
+    }
+
+  },
+}
+
+console.log(ParallaxConfig)
 
 function App() {
 
   //la référence (parallaxRef) permet d'obtenir l'accès au composant Parallax
   const parallaxRef = useRef()
+
+  const width = useAdaptiveTriggers({});
+
+  console.log(width)
+  console.log(ParallaxConfig[width][Pages.sixthPage])
 
 
   const scrollToSection = (sectionId) => {
@@ -59,15 +165,11 @@ function App() {
     <div className="App" >
       <Header scrollToSection={scrollToSection} />
 
-      <Parallax pages={7.15} class="animation" ref={parallaxRef}>
-
-        {/* offset : Determines where the layer will be at when scrolled to (0=start, 1=1st page, ...) 
-          factor : Size of a page, (1=100%, 1.5=1 and 1/2, ...)
-      */}
+      <Parallax pages={ParallaxConfig[width].pages} key={width} class="animation" ref={parallaxRef}>
 
         <ParallaxLayer
-          offset={0}
-          factor={1}
+          offset={ParallaxConfig[width][Pages.firstPage].offset}
+          factor={ParallaxConfig[width][Pages.firstPage].factor}
           style={{
             background: `rgba(0,0,0,0.325) url(${bg4})`,
             backgroundSize: 'cover',
@@ -78,8 +180,8 @@ function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={0}
-          speed={0.5}
+          offset={ParallaxConfig[width][Pages.secondPage].offset}
+          speed={ParallaxConfig[width][Pages.secondPage].speed}
           factor={1}
         // className="flex-center text-center flex-column blend-text "
         >
@@ -87,15 +189,14 @@ function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={0.95}
-          speed={-5}
-          factor={1}
+          offset={ParallaxConfig[width][Pages.thirdPage].offset}
+          speed={ParallaxConfig[width][Pages.thirdPage].speed}
+          factor={ParallaxConfig[width][Pages.thirdPage].factor}
           style={{ display: "flex", justifyContent: "center" }}
           onClick={() => {
             parallaxRef.current.scrollTo(1)
           }}
         >
-
           <p>
             <a href="#About">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
@@ -109,9 +210,9 @@ function App() {
         {/* About SECTION */}
 
         <ParallaxLayer
-          offset={1}
-          factor={1}
-          speed={0.1}
+          offset={ParallaxConfig[width][Pages.fourthPage].offset}
+          factor={ParallaxConfig[width][Pages.fourthPage].factor}
+          speed={ParallaxConfig[width][Pages.fourthPage].speed}
           id='about'
         >
           <About />
@@ -120,9 +221,9 @@ function App() {
         {/* Projects SECTION */}
 
         <ParallaxLayer
-          offset={2}
-          factor={0.5}
-          speed={0.1}
+          offset={ParallaxConfig[width][Pages.fifthPage].offset}
+          factor={ParallaxConfig[width][Pages.fifthPage].factor}
+          speed={ParallaxConfig[width][Pages.fifthPage].speed}
           // factor={0.5}
           // style={{ zIndex: 1, maxWidth: "50em" }}
           className="p-5 flex-center flex-column mx-auto"
@@ -134,10 +235,8 @@ function App() {
         {/* Projects CARDS */}
 
         <ParallaxLayer
-          // offset={2}
-          // factor={0.5}
-
           //dans start je rajoute +0.5
+          // sticky={ParallaxConfig[width][Pages.sixthPage].sticky}
           sticky={{ start: 2.5, end: 4 }}
           style={{ width: "33%" }}
         >
