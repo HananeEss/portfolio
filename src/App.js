@@ -50,7 +50,7 @@ const Pages = {
 
 const ParallaxConfig = {
   [Adaptive.xs]: {
-    pages: 6.5,
+    pages: 7,
     [Pages.firstPage]: {
       offset: 0,
       factor: 1,
@@ -76,22 +76,22 @@ const ParallaxConfig = {
       factor: 0.5,
     },
     [Pages.sixthPage]: {
-      offset: 2.7,
+      offset: 2.8,
       speed: 0.1,
       factor: 1,
     },
     [Pages.seventhPage]: {
       offset: 3.7,
-      speed: 0.2,
+      speed: 0.1,
       factor: 1,
     },
     [Pages.eighthPage]: {
       offset: 4.7,
-      speed: 0.25,
+      speed: 0.1,
       factor: 1,
     },
     [Pages.ninthPage]: {
-      offset: 5.6,
+      offset: 5.8,
       speed: 0.1,
       factor: 1,
     },
