@@ -32,6 +32,9 @@ import { P3card } from './Components/P3card';
 
 const Adaptive = {
   xs: 'xs',
+  s: 's',
+  m: 'm',
+  l: 'l',
   xl: 'xl',
 };
 
@@ -67,12 +70,12 @@ const ParallaxConfig = {
     },
     [Pages.fourthPage]: {
       offset: 1,
-      speed: 0.15,
+      speed: 0.2,
       factor: 1
     },
     [Pages.fifthPage]: {
-      offset: 2.6,
-      speed: 0.15,
+      offset: 2.7,
+      speed: 0.2,
       factor: 0.5,
     },
     [Pages.sixthPage]: {
@@ -91,18 +94,18 @@ const ParallaxConfig = {
       factor: 1,
     },
     [Pages.ninthPage]: {
-      offset: 6.5,
+      offset: 6.3,
       speed: 0.1,
       factor: 1,
     },
     [Pages.tenthPage]: {
-      offset: 7.5,
+      offset: 7.4,
 
     }
   },
 
-  [Adaptive.xl]: {
-    pages: 7.15,
+  [Adaptive.s]: {
+    pages: 7.1,
     [Pages.firstPage]: {
       offset: 0,
       factor: 1,
@@ -119,13 +122,117 @@ const ParallaxConfig = {
     },
     [Pages.fourthPage]: {
       offset: 1,
-      speed: 0.2,
+      speed: 0.15,
+      factor: 1
+    },
+    [Pages.fifthPage]: {
+      offset: 2.55,
+      speed: 0.15,
+      factor: 0.5,
+    },
+    [Pages.sixthPage]: {
+      offset: 3,
+      speed: 0.1,
+      factor: 1,
+    },
+    [Pages.seventhPage]: {
+      offset: 4,
+      speed: 0.1,
+      factor: 1,
+    },
+    [Pages.eighthPage]: {
+      offset: 5,
+      speed: 0.1,
+      factor: 1,
+    },
+    [Pages.ninthPage]: {
+      offset: 6.1,
+      speed: 0.15,
+      factor: 1,
+    },
+    [Pages.tenthPage]: {
+      offset: 7,
+    }
+  },
+
+  [Adaptive.m]: {
+    pages: 7,
+    [Pages.firstPage]: {
+      offset: 0,
+      factor: 1,
+    },
+    [Pages.secondPage]: {
+      offset: 0.1,
+      speed: 0.5,
+      factor: 1
+    },
+    [Pages.thirdPage]: {
+      offset: 0.95,
+      speed: -5,
+      factor: 1
+    },
+    [Pages.fourthPage]: {
+      offset: 1.1,
+      speed: 0.1,
+      factor: 1
+    },
+    [Pages.fifthPage]: {
+      offset: 2.4,
+      speed: 0.15,
+      factor: 1,
+    },
+    [Pages.sixthPage]: {
+      offset: 2.8,
+      speed: 0.1,
+      factor: 1,
+    },
+    [Pages.seventhPage]: {
+      offset: 3.8,
+      speed: 0.1,
+      factor: 1,
+    },
+    [Pages.eighthPage]: {
+      offset: 4.8,
+      speed: 0.1,
+      factor: 1,
+    },
+    [Pages.ninthPage]: {
+      offset: 5.9,
+      speed: 0.05,
+      factor: 1,
+    },
+    [Pages.tenthPage]: {
+      offset: 6.9,
+      factor: 0.1,
+    }
+
+  },
+
+  [Adaptive.l]: {
+    pages: 7.2,
+    [Pages.firstPage]: {
+      offset: 0,
+      factor: 1,
+    },
+    [Pages.secondPage]: {
+      offset: 0.1,
+      speed: 0.5,
+      factor: 1
+    },
+    [Pages.thirdPage]: {
+      offset: 0.95,
+      speed: -5,
+      factor: 1
+    },
+    [Pages.fourthPage]: {
+      offset: 1,
+      speed: 0.1,
       factor: 1
     },
     [Pages.fifthPage]: {
       offset: 2,
-      speed: 0.1,
-      factor: 0.5,
+      speed: 0.15,
+      factor: 1,
     },
     [Pages.sixthPage]: {
       sticky: { start: 2.5, end: 4 },
@@ -137,12 +244,59 @@ const ParallaxConfig = {
       sticky: { start: 3.5, end: 5 },
     },
     [Pages.ninthPage]: {
-      offset: 6.1,
-      speed: 0.1,
+      offset: 6.2,
+      speed: 0.05,
       factor: 1,
     },
     [Pages.tenthPage]: {
-      offset: 7,
+      offset: 7.1,
+      factor: 0.1,
+    }
+
+  },
+
+  [Adaptive.xl]: {
+    pages: 7,
+    [Pages.firstPage]: {
+      offset: 0,
+      factor: 1,
+    },
+    [Pages.secondPage]: {
+      offset: 0.1,
+      speed: 0.5,
+      factor: 1
+    },
+    [Pages.thirdPage]: {
+      offset: 0.95,
+      speed: -5,
+      factor: 1
+    },
+    [Pages.fourthPage]: {
+      offset: 1,
+      speed: 0.1,
+      factor: 1
+    },
+    [Pages.fifthPage]: {
+      offset: 1.9,
+      speed: 0.15,
+      factor: 1,
+    },
+    [Pages.sixthPage]: {
+      sticky: { start: 2.2, end: 3.7 },
+    },
+    [Pages.seventhPage]: {
+      sticky: { start: 2.7, end: 4.2 },
+    },
+    [Pages.eighthPage]: {
+      sticky: { start: 3.2, end: 4.7 },
+    },
+    [Pages.ninthPage]: {
+      offset: 5.9,
+      speed: 0.05,
+      factor: 1,
+    },
+    [Pages.tenthPage]: {
+      offset: 6.9,
       factor: 0.1,
     }
 

@@ -43,7 +43,7 @@ export const Contact = () => {
             </div>
 
 
-            <Form className="p-4 border-secondary-subtle rounded-1 bg-secondary bg-opacity-10" style={{ fontSize: '15px' }} ref={form} onSubmit={sendEmail}>
+            <Form className="mx-auto p-4 border-secondary-subtle rounded-1 bg-secondary bg-opacity-10" style={{ fontSize: '15px', width: '100%' }} ref={form} onSubmit={sendEmail}>
                 <Form.Group className="mb-3 px-3 fw-semibold" controlId="exampleForm.ControlInput1">
                     <Form.Label>Name</Form.Label>
                     <Form.Control type="text" placeholder="" name="user_name" />
