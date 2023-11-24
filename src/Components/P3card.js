@@ -35,7 +35,7 @@ export const P3card = () => {
                 <p style={{ fontSize: '15px' }} >
                     Site pour afficher les films du studio Ghibli
                     <br />
-                    (HTML, JavaScript, CSS)
+                    (HTML, JavaScript, CSS, API)
                 </p>
             </CardDiv>
         </>
