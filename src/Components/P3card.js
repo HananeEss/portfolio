@@ -30,7 +30,7 @@ export const P3card = () => {
             >
             </CardDiv>
 
-            <CardDiv className='p-4 border-bottom border-start border-secondary-subtle text-center  bg-secondary bg-opacity-10'>
+            <CardDiv className='p-4  border-secondary-subtle text-center  bg-secondary bg-opacity-10'>
                 <h1 className="p-3 fw-semibold font-monospace" style={{ fontSize: '30px' }} >Studio Ghibli</h1>
                 <p style={{ fontSize: '15px' }} >
                     Site pour afficher les films du studio Ghibli

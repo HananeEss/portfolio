@@ -3,6 +3,7 @@
 import { useLayoutEffect, useState } from "react";
 
 const Adaptive = {
+
     xs: 'xs',
     s: 's',
     m: 'm',

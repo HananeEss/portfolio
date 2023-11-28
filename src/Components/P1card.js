@@ -25,7 +25,7 @@ export const P1card = () => {
             >
             </CardDiv>
 
-            <CardDiv className='p-4 border-end border-bottom border-secondary-subtle text-center  bg-secondary bg-opacity-10'>
+            <CardDiv className='p-4  border-secondary-subtle text-center  bg-secondary bg-opacity-10'>
                 <h1 className="p-3 fw-semibold font-monospace" style={{ fontSize: '30px' }} >Comfy Studio</h1>
                 <p style={{ fontSize: '15px' }} >
                     Site de vente de meubles
