@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap"
 import { Skills } from "../Components/Skills"
 import styled from 'styled-components';
 
-const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Tailwind', 'Bootstrap', 'React', 'NodeJS Basics', 'ExpressJS', 'SQL Basics', 'Sequelize', 'GIT', 'Github']
+const skills = ['HTML', 'CSS', 'JavaScript', 'Tailwind', 'Bootstrap', 'React', 'NodeJS Basics', 'ExpressJS', 'SQL Basics', 'Sequelize', 'GIT', 'Github']
 const targetedSkills = ['Java', 'Testing', 'Web Security', 'SEO']
 
 const Description = styled.div` 
